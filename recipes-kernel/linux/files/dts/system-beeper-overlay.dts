@@ -1,0 +1,38 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+
+  compatible = "brcm,bcm2735";
+
+	fragment@0 {
+		target = <&gpio>;
+		__overlay__ {
+      pwm_pins: pwm_pins {
+			  brcm,pins = <12 13>;
+			  brcm,function = <4 4>;
+		  };
+	  };
+  };
+
+	fragment@1 {
+		target = <&pwm>;
+		__overlay__ {
+			pinctrl-names = "default";
+			pinctrl-0 = <&pwm_pins>;
+			assigned-clock-rates = <100000000>;
+			status = "okay";
+		};
+	};
+
+	fragment@2 {
+		target-path = "/";
+		__overlay__ {
+			system_beeper: system_beeper {
+        compatible = "pwm-beeper";
+	      pwms = <&pwm 1 1000000>;
+			  status = "okay";
+			};
+		};
+	};
+};
