@@ -11,5 +11,3 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 RPI_KERNEL_DEVICETREE = " \
     bcm2710-rpi-zero-2.dtb \
     "
-
-VC4DTBO = ""
