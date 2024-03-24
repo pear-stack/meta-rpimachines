@@ -2,7 +2,7 @@ DEFAULTTUNE ?= "cortexa7thf-neon-vfpv4"
 require conf/machine/include/arm/armv7a/tune-cortexa7.inc
 include conf/machine/include/rpi-base.inc
 
-MACHINE_FEATURES += "pci"
+MACHINE_FEATURES += "pci mesa mesa-gl"
 MACHINE_EXTRA_RRECOMMENDS += "\
     linux-firmware-rpidistro-bcm43455 \
     bluez-firmware-rpidistro-bcm4345c0-hcd \
