@@ -2,7 +2,7 @@ do_deploy:append() {
     # Enable rotary encoder 
     if [ "${ENABLE_ROTARY_ENCODER}" = "1" ]; then
         echo "# Enable rotary encoder" >> $CONFIG
-        echo "dtoverlay=rotary-encoder,pin_a=17,pin_b=27,relative_axis=1,steps-per-period=2" >> $CONFIG
+        echo "dtoverlay=rotary-encoder,pin_a=19,pin_b=26,relative_axis=1,steps-per-period=2" >> $CONFIG
     fi
 
     # Enable system leds

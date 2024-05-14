@@ -7,6 +7,8 @@ SRC_URI += " \
     file://system-keypad-overlay.dts;subdir=linux-${MACHINE}-standard-build/arch/${ARCH}/boot/dts/overlays/ \
     file://system-beeper-overlay.dts;subdir=linux-${MACHINE}-standard-build/arch/${ARCH}/boot/dts/overlays/ \
     file://adxl345-i2c-overlay.dts;subdir=linux-${MACHINE}-standard-build/arch/${ARCH}/boot/dts/overlays/ \
+"
+SRC_URI += " \
     file://beeper.cfg \
 "
 
